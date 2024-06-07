@@ -1,0 +1,8 @@
+SELECT
+    CAST(ROUND(
+    ABS(MAX(LONG_W) - MIN(LONG_W))
+    +
+    ABS(MAX(LAT_N) - MIN(LAT_N))
+    , 4) AS DECIMAL(38,4))
+FROM
+    STATION
